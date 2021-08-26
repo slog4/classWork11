@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class Orders {
     private ArrayList<Zakaz>orders;
-    private int iD=0;
+    private String name;
+    private int iD = 1;
 
     public Orders(Zakaz...orders) {
         this.orders = new ArrayList<>();
@@ -17,7 +18,7 @@ public class Orders {
 
     @Override
     public String toString() {
-        return "Orders{" +" iD "+iD+"\n"+
+        return "Orders{" +
                 "orders=" + orders +
                 '}';
     }
@@ -31,7 +32,8 @@ public class Orders {
     }
     public void addZakaz(Zakaz zakaz){
         orders.add(zakaz);
-        this.iD++;
+        zakaz.setId(this.iD++);
+
     }
    /* public boolean searchOrder(String name){
         int arrayLength = orders.size();

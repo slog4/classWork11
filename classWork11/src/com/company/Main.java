@@ -15,22 +15,22 @@ public class Main {
         System.out.println(ingridient3);
         System.out.println(" ");*/
         Dish dish1 = new Dish("tea","ok",100,3, ingridient1, ingridient2, ingridient3);
-        System.out.println(dish1);
+//        System.out.println(dish1);
         Dish dish2 = new Dish("tea","ok",100,3, ingridient1, ingridient3);
-        System.out.println(dish2);
+//        System.out.println(dish2);
         Dish sandwich = new Dish("sandwich","ok",200,5,ingridient5,ingridient6,ingridient5);
         Zakaz zakaz1= new Zakaz(dish1,dish2);
-        System.out.println(zakaz1);
-        System.out.println(" ");
+//        System.out.println(zakaz1);
+//        System.out.println(" ");
         Zakaz zakaz2= new Zakaz(dish2,dish2);
-        System.out.println(zakaz2);
+//        System.out.println(zakaz2);
         Zakaz zakaz3 = new Zakaz(dish1,sandwich);
-        Orders orders = new Orders(zakaz1);
+        Orders orders = new Orders(zakaz1,zakaz2);
         System.out.println(orders);
         orders.addZakaz(zakaz3);
         System.out.println(orders);
-        orders.addZakaz(zakaz2);
-        System.out.println(orders);
+//        orders.addZakaz(zakaz2);
+
 
 //        System.out.println(orders.searchOrder("zakaz2"));
     }
